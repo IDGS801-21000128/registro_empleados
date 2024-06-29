@@ -1,0 +1,26 @@
+<div class="container mt-3">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Numero</th>
+        <th>Nombre</th>
+        <th>Correo</th>
+        <th>Teléfono</th>
+        <th>Fecha de Nacimiento</th>
+        <th>Sexo</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let empleado of empleados; let i = index">
+        <td>{{ empleado.numero }}</td>
+        <td>{{ empleado.nombre }}</td>
+        <td>{{ empleado.correo }}</td>
+        <td>{{ empleado.telefono }}</td>
+        <td>{{ empleado.fechaNacimiento }}</td>
+        <td>{{ empleado.sexo }}</td>
+        <td><button class="btn btn-danger" (click)="removeEmpleado(i)">Eliminar</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
